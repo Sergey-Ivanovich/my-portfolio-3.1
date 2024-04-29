@@ -2,6 +2,14 @@
   from {
     background-position: 0% 50%;
   }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0% 50%;
+  }
 }
 
 html {
@@ -49,22 +57,23 @@ header h1 {
 }
 
 header button {
+  transform-origin: left;
   padding: 5px 10px;
   border-radius: 10px;
-  border: none;
-  background-image: linear-gradient(to left, aqua, rgb(13, 110, 253));
+  border: 2px solid transparent;
+  background-image: linear-gradient(to left, aqua, blue, aqua, blue);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 600%;
   backdrop-filter: blur(10px);
-
+  animation: 10s move-gradient linear both infinite;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
 }
 
 header button:hover {
-  animation: move-gradient linear both;
+  border: 2px solid white;
   background-color: white;
 }
 
