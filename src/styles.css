@@ -78,5 +78,16 @@ header button:hover {
 }
 
 .logo {
+  transition: all 200ms ease-in-out;
+  border-radius: 10px;
+
   max-width: 100px;
+}
+
+.logo:hover {
+  padding: 10px;
+  max-width: 80px;
+  background-color: rgba(255, 255, 255, 0.549);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
 }
