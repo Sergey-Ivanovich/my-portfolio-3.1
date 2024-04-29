@@ -1,0 +1,9 @@
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  max-width: 100px;
+}
