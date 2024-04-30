@@ -12,6 +12,16 @@
   }
 }
 
+@keyframes shift-gradient {
+  from {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 html {
   overscroll-behavior: none;
 }
@@ -38,6 +48,7 @@ header {
 }
 
 nav {
+  margin: auto;
   right: 0px;
   top: 0px;
   width: 100%;
@@ -61,6 +72,11 @@ nav {
   font-size: 20px;
   padding-left: 30px;
   font-weight: bold;
+  transition: all 200ms ease-in-out;
+}
+
+.navlink-container a:hover {
+  color: white;
 }
 
 .navlink-container:hover {
@@ -113,4 +129,7 @@ header button {
   background-color: rgba(255, 255, 255, 0.549);
   padding: 10px;
   backdrop-filter: blur(20px);
+}
+
+@media (max-width: 768px) {
 }
