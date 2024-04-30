@@ -121,12 +121,30 @@ header h3 {
 header button {
   transform-origin: left;
   padding: 5px 10px;
-  background-image: linear-gradient(to left, aqua, blue, aqua, blue);
+  background-image: linear-gradient(
+    to left,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue
+  );
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  background-size: 600%;
+  background-size: 1500%;
   backdrop-filter: blur(10px);
-  animation: 10s move-gradient linear both infinite;
+  animation: 40s move-gradient linear both infinite;
   font-weight: bold;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
