@@ -121,7 +121,11 @@ nav {
   display: flex;
   justify-content: space-between;
   font-family: arial, helvetica, sans-serif;
-  z-index: 9000;
+  z-index: 9999;
+}
+
+nav .mobile-nav {
+  display: none;
 }
 
 .navlink-container {
@@ -234,6 +238,10 @@ header button i:hover {
   color: white;
 }
 
+header button i:active {
+  transition: all 1ms ease-in-out;
+  color: black;
+}
 .white-hover-border {
   border-radius: 10px;
   border: 2px solid transparent;
@@ -317,10 +325,28 @@ footer i:hover {
 }
 
 @media (max-width: 662px) {
+  nav {
+    padding: 15px;
+  }
+
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 8000;
+    transition: all 200ms ease-in-out;
+  }
+
+  .hide-nav {
+    transform: translateX(2000px);
+  }
+
   header nav .img-container {
     margin-top: 0px;
   }
 
-  .border-container:has(.hamburger-menu) {
+  header {
+    text-align: center;
   }
 }
