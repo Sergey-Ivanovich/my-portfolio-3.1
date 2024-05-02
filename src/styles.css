@@ -210,6 +210,30 @@ header button {
   transition: all 200ms ease-in-out;
 }
 
+header button.hamburger-menu {
+  border: none;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+header button i {
+  font-size: 30px;
+  color: rgb(0, 8, 255);
+  background-image: none;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+  padding: 20px;
+  transition: all 200ms ease-in-out;
+}
+
+header button i:hover {
+  background-color: var(--transparent-white);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 10px;
+}
+
 .white-hover-border {
   border-radius: 10px;
   border: 2px solid transparent;
@@ -290,4 +314,14 @@ footer i:hover {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+@media (max-width: 662px) {
+  header nav .img-container {
+    margin-top: 0px;
+  }
+
+  header nav button.hamburger-menu {
+    margin-top: 10px;
+  }
 }
