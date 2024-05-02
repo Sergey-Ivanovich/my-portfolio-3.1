@@ -46,6 +46,17 @@ html {
   }
 }
 
+@keyframes float-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+
 :root {
   --transparent-white: rgba(255, 255, 255, 0.3);
 }
@@ -71,7 +82,7 @@ header {
   padding: 50px;
 }
 
-header .loader-cover {
+/*header .loader-cover {
   border: 5px solid white;
   transform-origin: right;
   animation: 1s move-right both ease-in;
@@ -96,9 +107,11 @@ header .loader-cover {
   display: block;
   margin: 300px auto;
   max-width: 200px;
-}
+}*/
 
 nav {
+  animation: 1s float-down both;
+  animation-delay: 0.3s;
   margin: auto;
   right: 0px;
   top: 0px;
@@ -207,6 +220,8 @@ header button {
 }
 
 .greeting {
+  animation: 1s float-down both;
+
   padding-top: 250px;
 }
 
