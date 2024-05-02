@@ -224,6 +224,7 @@ header button i {
   -webkit-text-fill-color: currentColor;
   padding: 20px;
   transition: all 200ms ease-in-out;
+  border-radius: 10px;
 }
 
 header button i:hover {
@@ -231,7 +232,6 @@ header button i:hover {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: white;
-  border-radius: 10px;
 }
 
 .white-hover-border {
@@ -321,7 +321,6 @@ footer i:hover {
     margin-top: 0px;
   }
 
-  header nav button.hamburger-menu {
-    margin-top: 10px;
+  .border-container:has(.hamburger-menu) {
   }
 }
