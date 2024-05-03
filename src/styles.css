@@ -129,6 +129,28 @@ nav {
   display: none;
 }
 
+.mobile-nav ul {
+  padding: 40px 0px 0px;
+}
+
+.mobile-nav ul button {
+  background-color: var(--transparent-white);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.mobile-nav ul button:hover {
+  background-color: white;
+}
+
+.mobile-nav li {
+  list-style: none;
+}
+
 .navlink-container {
   border: 2px solid transparent;
   transition: all 200ms ease-in-out;
