@@ -124,7 +124,8 @@ nav {
   z-index: 9999;
 }
 
-nav .mobile-nav {
+.mobile-nav {
+  z-index: 9000;
   display: none;
 }
 
@@ -182,7 +183,7 @@ header h3 {
   font-size: 25px;
 }
 
-header button {
+header button.live-gradient {
   transform-origin: left;
   padding: 5px 10px;
   background-image: linear-gradient(
@@ -218,20 +219,19 @@ header button.hamburger-menu {
   border: none;
   border-radius: 10px;
   padding: 0px;
+  background-color: transparent;
 }
 
-header button i {
+header button.hamburger-menu i {
   font-size: 30px;
   color: rgb(0, 8, 255);
-  background-image: none;
-  background-clip: border-box;
-  -webkit-text-fill-color: currentColor;
+
   padding: 20px;
   transition: all 200ms ease-in-out;
   border-radius: 10px;
 }
 
-header button i:hover {
+header button.hamburger-menu i:hover {
   background-color: var(--transparent-white);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -324,7 +324,7 @@ footer i:hover {
   -webkit-backdrop-filter: blur(10px);
 }
 
-@media (max-width: 662px) {
+@media (max-width: 767px) {
   nav {
     padding: 15px;
   }
@@ -332,18 +332,33 @@ footer i:hover {
   .mobile-nav {
     display: block;
     position: fixed;
-    background-color: white;
+    background-color: var(--transparent-white);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-left: 2px solid white;
     width: 100%;
-    z-index: 8000;
+    margin-left: -50px;
+    height: 100vh;
+    padding: 100px 10px;
+    margin-top: -50px;
     transition: all 200ms ease-in-out;
   }
 
   .hide-nav {
-    transform: translateX(2000px);
+    transform: translateX(100vw);
   }
 
   header nav .img-container {
     margin-top: 0px;
+  }
+
+  header h1 {
+    font-size: 40px;
+    margin: 20px 0px;
+  }
+
+  header h3 {
+    font-size: 20px;
   }
 
   header {
