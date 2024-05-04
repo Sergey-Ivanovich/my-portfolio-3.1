@@ -57,8 +57,23 @@ html {
   }
 }
 
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 :root {
   --transparent-white: rgba(255, 255, 255, 0.3);
+  --programmer-green: rgb(5, 255, 5);
 }
 
 body {
@@ -158,6 +173,38 @@ nav .navlink-container {
   padding: 10px;
   background-clip: border-box;
   height: 100%;
+}
+
+nav .navlink-container .current-page {
+  color: white;
+}
+
+nav .navlink-container button.current-page {
+  background-image: linear-gradient(
+    to left,
+
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white
+  );
+  background-size: 1000%;
 }
 
 .border-container {
@@ -308,6 +355,53 @@ header button i:active {
   backdrop-filter: blur(20px);
 }
 
+main {
+  position: sticky;
+  background-color: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  color: white;
+  margin-top: 500px;
+  padding: 40vh 50px 50vh;
+}
+
+main h2 {
+  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+  color: var(--programmer-green);
+  background-color: black;
+  border-radius: 10px;
+}
+
+.blink {
+  animation: 1s blink infinite both;
+}
+
+main .skill-sum {
+  display: inline-block;
+}
+
+.skill-sum ul {
+  padding: 0px;
+}
+
+.skill-sum li {
+  background-image: linear-gradient(
+    to left,
+    rgb(0, 255, 247),
+    rgb(140, 0, 255),
+    rgb(0, 255, 247),
+    rgb(140, 0, 255),
+    rgb(0, 255, 247),
+    rgb(140, 0, 255)
+  );
+  animation: 10s move-gradient both infinite;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 600%;
+  list-style: none;
+  font-weight: bold;
+}
+
 footer {
   color: white;
   text-align: center;
@@ -366,6 +460,11 @@ footer i:hover {
     padding: 100px 10px;
     margin-top: -50px;
     transition: all 200ms ease-in-out;
+  }
+
+  .mobile-nav ul button.current-page {
+    background-color: black;
+    color: white;
   }
 
   .hide-nav {
