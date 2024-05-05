@@ -71,6 +71,12 @@ html {
   }
 }
 
+@keyframes bounce {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
 :root {
   --transparent-white: rgba(255, 255, 255, 0.3);
   --programmer-green: rgb(5, 255, 5);
@@ -103,6 +109,7 @@ header {
   background-position: center;
   background-size: 200%;
   border-bottom: 5px solid black;
+  height: 100vh;
 }
 
 nav {
@@ -225,12 +232,8 @@ header h1 {
   letter-spacing: 3px;
   font-weight: bold;
   margin-bottom: 20px;
-  font-size: 70px;
+  font-size: 50px;
   line-height: 1.5em;
-}
-
-header h2 {
-  font-size: 40px;
 }
 
 header h3 {
@@ -309,7 +312,11 @@ header button i:active {
 .greeting {
   animation: 1s float-down both;
   margin-left: -50px;
-  padding-top: 150px;
+  padding-top: 250px;
+}
+
+header i.bounce {
+  display: none;
 }
 
 .logo {
@@ -415,9 +422,8 @@ footer i:hover {
     border-left: 2px solid white;
     width: 100%;
     margin-left: -50px;
-    height: 100vh;
+    height: 100%;
     padding: 100px 10px;
-    margin-top: -50px;
     transition: all 200ms ease-in-out;
   }
 
@@ -431,7 +437,7 @@ footer i:hover {
   }
 
   header {
-    background-size: 250%;
+    background-size: 400%;
   }
 
   header nav .img-container {
