@@ -267,6 +267,7 @@ header button.live-gradient {
   background-clip: text;
   background-size: 1000%;
   backdrop-filter: blur(10px);
+  -webkit-animation: blur(10px);
   animation: 40s move-gradient linear both infinite;
   font-weight: bold;
   text-transform: uppercase;
@@ -343,7 +344,6 @@ header i.bounce {
   backdrop-filter: blur(10px);
   background-color: var(--transparent-white);
   padding: 10px;
-  backdrop-filter: blur(20px);
 }
 
 main {
