@@ -430,6 +430,10 @@ footer i:hover {
     transform: translateX(100vw);
   }
 
+  header {
+    background-size: 250%;
+  }
+
   header nav .img-container {
     margin-top: 0px;
   }
