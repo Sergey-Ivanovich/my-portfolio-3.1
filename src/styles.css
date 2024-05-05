@@ -101,7 +101,7 @@ header {
   background-image: url(../images/triangle-blue.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 250%;
+  background-size: 200%;
   border-bottom: 5px solid black;
 }
 
@@ -137,6 +137,7 @@ nav {
   border-radius: 10px;
   margin-bottom: 10px;
   width: 90%;
+  transition: all 200ms ease-in-out;
 }
 
 .mobile-nav ul button:hover {
@@ -307,7 +308,7 @@ header button i:active {
 
 .greeting {
   animation: 1s float-down both;
-
+  margin-left: -50px;
   padding-top: 150px;
 }
 
