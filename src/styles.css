@@ -161,6 +161,7 @@ nav li a:hover {
 }
 
 a.nav-arrow i {
+  color: gray;
   transition: all 150ms ease-in-out;
   transform: rotateY(180deg);
 }
@@ -321,6 +322,8 @@ footer i:hover {
 
   header {
     background-size: 400%;
+    display: block;
+    margin: auto;
   }
 
   header h1 {
