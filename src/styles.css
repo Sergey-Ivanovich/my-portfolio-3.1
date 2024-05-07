@@ -79,6 +79,7 @@ html {
 
 :root {
   --transparent-white: rgba(255, 255, 255, 0.3);
+  --transparent-gray: rgba(176, 174, 174, 0.3);
   --programmer-green: rgb(5, 255, 5);
 }
 
@@ -101,12 +102,35 @@ body {
   color: black;
 }
 
-nav {
+.fixed-right {
   position: fixed;
   right: 0px;
-  background-color: var(--transparent-white);
+  transform: translateX(0px);
+  transition: all 200ms ease-in-out;
+}
+
+nav {
+  border-radius: 10px 0px 0px 10px;
+  background-color: lightgray;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+  transition: all 150ms ease-in-out;
+  transform-origin: center;
+}
+
+nav li {
+  padding: 10px 0px 10px;
+  transition: all 150ms ease-in-out;
+}
+
+nav li:hover {
+  cursor: pointer;
+  color: gray;
 }
 
 header {
