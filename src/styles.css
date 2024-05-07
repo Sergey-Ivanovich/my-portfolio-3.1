@@ -140,7 +140,13 @@ nav li {
   padding: 10px 0px;
 }
 
+nav li p {
+  position: absolute;
+  left: -100px;
+}
+
 nav li a {
+  color: black;
   font-size: 30px;
   transition: all 150ms ease-in-out;
 }
@@ -159,6 +165,11 @@ header {
   background-size: 200%;
   border-bottom: 5px solid black;
   height: 100vh;
+}
+
+header h1,
+header h3 {
+  animation: 1s float-down ease-in-out;
 }
 
 header h1 {
@@ -235,6 +246,32 @@ footer i:hover {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+@media (min-width: 767px) {
+  nav li a:hover::before {
+    position: absolute;
+    right: 70px;
+    font-size: 20px;
+    color: black;
+    background-color: lightgray;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  nav li a.home:hover::before {
+    content: "Home";
+  }
+  nav li a.about:hover::before {
+    content: "About";
+  }
+  nav li a.project:hover::before {
+    content: "Projects";
+  }
+  nav li a.contact:hover::before {
+    content: "Contact";
+  }
 }
 
 @media (max-width: 767px) {
