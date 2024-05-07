@@ -288,6 +288,12 @@ footer i:hover {
   }
 }
 
+@media (max-width: 1200px) {
+  header {
+    background-size: 400%;
+  }
+}
+
 @media (max-width: 767px) {
   /* nav {
     padding: 15px;
@@ -321,7 +327,6 @@ footer i:hover {
   }*/
 
   header {
-    background-size: 400%;
     display: block;
     margin: auto;
   }
