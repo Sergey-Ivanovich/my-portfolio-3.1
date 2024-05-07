@@ -1,7 +1,7 @@
-function toggleMobileNav() {
+function toggleNav() {
   mobileNavElement.classList.toggle("hide-nav");
 }
 
-let mobileNavElement = document.querySelector("#mobile-nav");
-let hamburgerMenuToggle = document.querySelector(".hamburger-menu");
-hamburgerMenuToggle.addEventListener("click", toggleMobileNav);
+let mobileNavElement = document.querySelector("#navbar");
+let menuToggle = document.querySelector(".nav-arrow");
+menuToggle.addEventListener("click", toggleNav);

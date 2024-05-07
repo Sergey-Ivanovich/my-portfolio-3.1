@@ -156,6 +156,19 @@ nav li a:hover {
   color: gray;
 }
 
+.hide-nav {
+  transform: translateX(60px);
+}
+
+a.nav-arrow i {
+  transition: all 150ms ease-in-out;
+  transform: rotateY(180deg);
+}
+
+.hide-nav a.nav-arrow i {
+  transform: rotateY(0deg);
+}
+
 header {
   text-align: center;
   padding: 300px 20px;
