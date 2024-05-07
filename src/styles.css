@@ -107,6 +107,18 @@ body {
   right: 0px;
   transform: translateX(0px);
   transition: all 200ms ease-in-out;
+  z-index: 9999;
+}
+
+.fixed-right:has(nav) {
+  display: flex;
+}
+
+.fixed-right .nav-arrow {
+  padding: 10px;
+  font-size: 30px;
+  display: block;
+  margin: auto;
 }
 
 nav {
@@ -117,6 +129,7 @@ nav {
 }
 
 nav ul {
+  margin: auto;
   list-style: none;
   padding: 10px;
   transition: all 150ms ease-in-out;
@@ -124,11 +137,15 @@ nav ul {
 }
 
 nav li {
-  padding: 10px 0px 10px;
+  padding: 10px 0px;
+}
+
+nav li a {
+  font-size: 30px;
   transition: all 150ms ease-in-out;
 }
 
-nav li:hover {
+nav li a:hover {
   cursor: pointer;
   color: gray;
 }
