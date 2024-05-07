@@ -22,10 +22,6 @@
   }
 }
 
-html {
-  overscroll-behavior: none;
-}
-
 @keyframes move-right {
   to {
     transform: translatex(100%);
@@ -77,6 +73,10 @@ html {
   }
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 :root {
   --transparent-white: rgba(255, 255, 255, 0.3);
   --programmer-green: rgb(5, 255, 5);
@@ -101,130 +101,23 @@ body {
   color: black;
 }
 
+nav {
+  position: fixed;
+  right: 0px;
+  background-color: var(--transparent-white);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
 header {
   text-align: center;
-  padding: 0px 0px 100px 50px;
+  padding: 300px 20px;
   background-image: url(../images/triangle-blue.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200%;
   border-bottom: 5px solid black;
   height: 100vh;
-}
-
-nav {
-  animation: 1s float-down both;
-  animation-delay: 0.3s;
-  margin: auto;
-  right: 0px;
-  top: 0px;
-  width: 100%;
-  position: fixed;
-  padding: 20px 50px 50px;
-  display: flex;
-  justify-content: space-between;
-  font-family: arial, helvetica, sans-serif;
-  z-index: 9999;
-}
-
-.mobile-nav {
-  z-index: 9000;
-  display: none;
-}
-
-.mobile-nav ul {
-  padding: 40px 0px 0px;
-}
-
-.mobile-nav ul button {
-  background-color: var(--transparent-white);
-  backdrop-filter: blur(40px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 2px solid black;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  width: 90%;
-  transition: all 200ms ease-in-out;
-}
-
-.mobile-nav ul button:hover {
-  background-color: white;
-}
-
-.mobile-nav li {
-  list-style: none;
-}
-
-nav .navlink-container {
-  border: 2px solid transparent;
-  transition: all 200ms ease-in-out;
-  border-radius: 10px;
-  padding: 10px;
-  background-clip: border-box;
-  height: 100%;
-}
-
-nav .navlink-container .current-page {
-  color: black;
-}
-
-.white-hover-border nav .navlink-container button.current-page {
-  background-image: linear-gradient(
-    to left,
-
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white,
-    rgb(170, 170, 170),
-    white
-  );
-  background-size: 1000%;
-}
-
-.border-container {
-  padding: 2px;
-  margin-top: -10px;
-  border: 2px solid transparent;
-  transition: all 200ms ease-in-out;
-}
-
-.border-container:hover {
-  border-radius: 14px;
-
-  border: 2px solid black;
-}
-
-.navlink-container a {
-  text-decoration: none;
-  font-size: 20px;
-  padding-left: 30px;
-  font-weight: bold;
-  transition: all 200ms ease-in-out;
-}
-
-.navlink-container a:hover {
-  color: gray;
-}
-
-.navlink-container:hover {
-  background-color: var(--transparent-white);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 header h1 {
@@ -239,111 +132,6 @@ header h1 {
 header h3 {
   line-height: 1.5em;
   font-size: 25px;
-}
-
-header button.live-gradient {
-  transform-origin: left;
-  padding: 5px 10px;
-  background-image: linear-gradient(
-    to left,
-    aqua,
-    blue,
-    aqua,
-    blue,
-    aqua,
-    blue,
-    aqua,
-    blue,
-    aqua,
-    blue,
-    aqua,
-    blue,
-    aqua,
-    blue,
-    aqua,
-    blue
-  );
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  background-size: 1000%;
-  backdrop-filter: blur(10px);
-  -webkit-animation: blur(10px);
-  animation: 40s move-gradient linear both infinite;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: all 200ms ease-in-out;
-}
-
-header button.hamburger-menu {
-  border: none;
-  border-radius: 10px;
-  padding: 0px;
-  background-color: transparent;
-}
-
-header button.hamburger-menu i {
-  font-size: 30px;
-  color: rgb(0, 8, 255);
-
-  padding: 20px;
-  transition: all 200ms ease-in-out;
-  border-radius: 10px;
-}
-
-header button.hamburger-menu i:hover {
-  background-color: var(--transparent-white);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  color: white;
-}
-
-header button i:active {
-  transition: all 1ms ease-in-out;
-  color: black;
-}
-.white-hover-border {
-  border-radius: 10px;
-  border: 2px solid transparent;
-}
-
-.white-hover-border:hover {
-  border: 2px solid black;
-}
-
-.greeting {
-  animation: 1s float-down both;
-  margin-left: -50px;
-  padding-top: 250px;
-}
-
-header i.bounce {
-  display: none;
-}
-
-.logo {
-  transition: all 200ms ease-in-out;
-  border-radius: 10px;
-  max-width: 100px;
-  padding: 10px;
-}
-
-.img-container {
-  margin-top: -10px;
-  padding: 2px;
-  border: 2px solid transparent;
-  transition: all 200ms ease-in-out;
-}
-
-.img-container:hover {
-  border-radius: 14px;
-  border: 2px solid black;
-}
-
-.logo:hover {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background-color: var(--transparent-white);
-  padding: 10px;
 }
 
 main {
@@ -409,7 +197,7 @@ footer i:hover {
 }
 
 @media (max-width: 767px) {
-  nav {
+  /* nav {
     padding: 15px;
   }
 
@@ -431,17 +219,17 @@ footer i:hover {
     background-color: black;
     color: white;
   }
+  
+  header nav .img-container {
+    margin-top: 0px;
+  }
 
   .hide-nav {
     transform: translateX(100vw);
-  }
+  }*/
 
   header {
     background-size: 400%;
-  }
-
-  header nav .img-container {
-    margin-top: 0px;
   }
 
   header h1 {
@@ -457,3 +245,227 @@ footer i:hover {
     text-align: center;
   }
 }
+
+/* nav {
+  animation: 1s float-down both;
+  animation-delay: 0.3s;
+  margin: auto;
+  right: 0px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  padding: 20px 50px 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: arial, helvetica, sans-serif;
+  z-index: 9999;
+}
+
+.mobile-nav {
+  z-index: 9000;
+  display: none;
+}
+
+.mobile-nav ul {
+  padding: 40px 0px 0px;
+}
+
+.mobile-nav ul button {
+  background-color: var(--transparent-white);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  transition: all 200ms ease-in-out;
+}
+
+.mobile-nav ul button:hover {
+  background-color: white;
+}
+
+.mobile-nav li {
+  list-style: none;
+}
+
+nav .navlink-container {
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+  border-radius: 10px;
+  padding: 5px;
+  background-clip: border-box;
+  height: 100%;
+}
+
+nav .navlink-container .current-page {
+  color: black;
+}
+
+.white-hover-border nav .navlink-container button.current-page {
+  background-image: linear-gradient(
+    to left,
+
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white,
+    rgb(170, 170, 170),
+    white
+  );
+  background-size: 1000%;
+} 
+
+.border-container {
+  padding: 2px;
+  margin-top: -10px;
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+
+.border-container:hover {
+  border-radius: 14px;
+
+  border: 2px solid black;
+}
+
+.navlink-container a {
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 30px;
+  font-weight: bold;
+  transition: all 200ms ease-in-out;
+}
+
+.navlink-container a:hover {
+  color: gray;
+}
+
+.navlink-container:hover {
+  background-color: var(--transparent-white);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+} 
+
+
+
+header button.live-gradient {
+  transform-origin: left;
+  padding: 5px 10px;
+  background-image: linear-gradient(
+    to left,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue,
+    aqua,
+    blue
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 1000%;
+  backdrop-filter: blur(10px);
+  -webkit-animation: blur(10px);
+  animation: 40s move-gradient linear both infinite;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 200ms ease-in-out;
+}
+
+header button.hamburger-menu {
+  border: none;
+  border-radius: 10px;
+  padding: 0px;
+  background-color: transparent;
+}
+
+header button.hamburger-menu i {
+  font-size: 30px;
+  color: rgb(0, 8, 255);
+
+  padding: 20px;
+  transition: all 200ms ease-in-out;
+  border-radius: 10px;
+}
+
+header button.hamburger-menu i:hover {
+  background-color: var(--transparent-white);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+header button i:active {
+  transition: all 1ms ease-in-out;
+  color: black;
+}
+.white-hover-border {
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-color: transparent;
+}
+
+.white-hover-border:hover {
+  border: 2px solid black;
+  opacity: 1;
+}
+
+.greeting {
+  animation: 1s float-down both;
+  margin-left: -50px;
+  padding-top: 250px;
+}
+
+header i.bounce {
+  display: none;
+}
+
+.logo {
+  transition: all 200ms ease-in-out;
+  border-radius: 10px;
+  max-width: 100px;
+  padding: 10px;
+}
+
+.img-container {
+  margin-top: -10px;
+  padding: 2px;
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+
+.img-container:hover {
+  border-radius: 14px;
+  border: 2px solid black;
+}
+
+.logo:hover {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: var(--transparent-white);
+  padding: 10px;
+} */
