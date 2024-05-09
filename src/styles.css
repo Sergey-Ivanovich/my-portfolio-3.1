@@ -114,18 +114,18 @@ body {
   display: flex;
 }
 
-.fixed-right .nav-arrow {
-  padding: 10px;
-  font-size: 30px;
-  display: block;
-  margin: auto;
-}
-
 nav {
   border-radius: 10px 0px 0px 10px;
   background-color: lightgray;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
+}
+
+a.nav-arrow {
+  background-color: rgb(230, 230, 230);
+  border-radius: 100px;
+  margin-right: 8px;
+  padding: 5px;
 }
 
 nav ul {
@@ -158,16 +158,6 @@ nav li a:hover {
 
 .hide-nav {
   transform: translateX(60px);
-}
-
-a.nav-arrow i {
-  color: black;
-  transition: all 150ms ease-in-out;
-  transform: rotateY(180deg);
-}
-
-.hide-nav a.nav-arrow i {
-  transform: rotateY(0deg);
 }
 
 header {
