@@ -178,7 +178,13 @@ header {
   background-position: center;
   background-size: 200%;
   border-bottom: 5px solid black;
+  padding-top: 30vh;
+  padding-top: 30vh;
   height: 100vh;
+}
+
+header .greeting {
+  align-content: center;
 }
 
 header h1,
