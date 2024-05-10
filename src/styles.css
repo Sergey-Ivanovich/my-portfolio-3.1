@@ -124,7 +124,7 @@ nav {
 a.nav-arrow {
   background-color: rgb(230, 230, 230);
   border-radius: 100px;
-  margin-right: 8px;
+  margin-right: 5px;
   padding: 5px;
 }
 
@@ -157,7 +157,7 @@ nav li a:hover {
 }
 
 .hide-nav {
-  transform: translateX(60px);
+  transform: translateX(56px);
 }
 
 header {
