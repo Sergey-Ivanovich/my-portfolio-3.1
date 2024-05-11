@@ -207,11 +207,11 @@ header h3 {
 }
 
 main {
-  position: sticky;
-
+  /*position: sticky;
   color: white;
   margin-top: 500px;
-  padding: 40vh 50px 50vh;
+  padding: 40vh 50px 50vh;*/
+  padding: 50px;
 }
 
 .extend-height {
@@ -219,10 +219,10 @@ main {
 }
 
 main h2 {
-  font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
+  /*font-family: "Roboto Mono", Arial, Helvetica, sans-serif;
   color: var(--programmer-green);
-
-  border-radius: 10px;
+  border-radius: 10px;*/
+  text-align: center;
 }
 
 .blink {
@@ -266,6 +266,14 @@ footer i:hover {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  main h2 {
+    animation: fade-in ease-in-out both;
+    animation-timeline: scroll();
+    animation-range: normal cover 500px;
+  }
 }
 
 @media (min-width: 767px) {
