@@ -121,13 +121,15 @@ nav {
   -webkit-backdrop-filter: blur(60px);
   -webkit-backdrop-filter: blur(60px);
   border: 1px solid black;
+
   backdrop-filter: blur(10px);
 }
 
 a.nav-arrow {
-  background-color: rgb(230, 230, 230);
-  border-radius: 100px;
+  background-color: black /* rgb(230, 230, 230)*/;
+  border-radius: 10px 3px 3px 10px;
   margin-right: 5px;
+
   padding: 5px;
 }
 
@@ -331,6 +333,10 @@ footer i:hover {
   .hide-nav {
     transform: translateX(100vw);
   }*/
+
+  nav {
+    border-radius: 3px 0px 0px 3px;
+  }
 
   header {
     display: block;
