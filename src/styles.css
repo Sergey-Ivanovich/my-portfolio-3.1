@@ -236,6 +236,44 @@ main h2:hover {
 
 /*test \/*/
 
+.flip-card {
+  width: 400px;
+  height: 400px;
+}
+
+.card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  position: absolute;
+  transition: all 200ms ease-in-out;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.front-face {
+  transform: rotateY(0deg);
+  background-color: gray;
+}
+
+.back-face {
+  transform: rotateY(180deg);
+  background-color: aqua;
+}
+
+.flipped .front-face {
+  transform: rotateY(180deg);
+}
+
+.flipped .back-face {
+  transform: rotateY(0deg);
+}
+
 /*test /\*/
 
 .blink {

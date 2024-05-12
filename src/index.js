@@ -11,3 +11,8 @@ if (window.innerWidth < 767) {
 }
 
 /* test \/*/
+
+let flipCardsElement = document.querySelector(".flip-card");
+flipCardsElement.addEventListener("click", () => {
+  flipCardsElement.classList.toggle("flipped");
+});
