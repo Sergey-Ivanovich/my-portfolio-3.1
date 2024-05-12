@@ -16,7 +16,6 @@ html {
 body {
   overflow-x: hidden;
 
-  background-color: white;
   background-repeat: no-repeat;
   color: black;
   font-family: "poppins", Arial, Helvetica, sans-serif;
@@ -84,6 +83,47 @@ nav li a:hover {
 nav li a:active {
   color: var(--blue);
   transition: all 10ms ease-in-out;
+}
+
+@keyframes land-in {
+  from {
+    transform: scale(5);
+  }
+  45% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  70% {
+    border: none;
+    transform: rotate(0);
+  }
+
+  to {
+    padding: 200px;
+    border: 100px solid var(--refined-blue);
+    transform: scale(1), rotate(45deg);
+  }
+}
+
+.diamond-master {
+  height: 140vh;
+  overflow: visible;
+  background-color: var(--charcoal-blue);
+}
+
+.diamond-container {
+  animation: 1.5s land-in forwards;
+  display: block;
+  margin: auto;
+  height: 100vh;
+  background-color: var(--gray-blue);
+  width: 100vh;
+
+  transform: rotate(45deg);
 }
 
 .hide-nav {

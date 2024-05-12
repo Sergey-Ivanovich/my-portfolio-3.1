@@ -9,10 +9,3 @@ menuToggle.addEventListener("click", toggleNav);
 if (window.innerWidth < 767) {
   toggleNav();
 }
-
-/* test \/*/
-
-let flipCardsElement = document.querySelector(".flip-card");
-flipCardsElement.addEventListener("click", () => {
-  flipCardsElement.classList.toggle("flipped");
-});
