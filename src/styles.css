@@ -3,6 +3,14 @@ html {
 }
 
 :root {
+  --navy: #000033;
+  --blue: #0066cc;
+  --light-blue: #0099ff;
+  --gray: #ededed;
+  --refined-blue: #2185d5;
+  --charcoal-blue: #3a4750;
+  --gray-blue: #303841;
+  --platinum-gray: #f3f3f3;
 }
 
 body {
@@ -14,16 +22,17 @@ body {
   font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
-.fixed-right {
+.fixed-left {
   position: fixed;
-  right: 0px;
+  left: 0px;
   transform: translateX(0px);
   transition: all 200ms ease-in-out;
   z-index: 9999;
 }
 
-.fixed-right:has(nav) {
+.fixed-left:has(nav) {
   display: flex;
+  padding-top: 30vh;
 }
 
 nav {
@@ -32,15 +41,15 @@ nav {
   -webkit-backdrop-filter: blur(60px);
   -webkit-backdrop-filter: blur(60px);
   border: 1px solid black;
-  border-radius: 3px 0px 0px 3px;
+  border-radius: 0px 3px 3px 0px;
   backdrop-filter: blur(10px);
 }
 
 a.nav-arrow {
   background-color: black;
-  border-radius: 10px 3px 3px 10px;
-  margin-right: 5px;
-
+  border-radius: 3px 10px 10px 3px;
+  margin-left: 5px;
+  cursor: pointer;
   padding: 5px;
 }
 
@@ -69,16 +78,16 @@ nav li a {
 
 nav li a:hover {
   cursor: pointer;
-  color: gray;
+  color: var(--charcoal-blue);
 }
 
 nav li a:active {
-  color: aqua;
+  color: var(--blue);
   transition: all 10ms ease-in-out;
 }
 
 .hide-nav {
-  transform: translateX(56px);
+  transform: translateX(-58px);
 }
 
 footer {
@@ -126,7 +135,7 @@ footer i:hover {
 @media (min-width: 767px) {
   nav li a:hover::before {
     position: absolute;
-    right: 70px;
+    left: 90px;
     font-size: 20px;
     color: black;
     background-color: var(--transparent-white);
