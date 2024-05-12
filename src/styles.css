@@ -15,7 +15,7 @@ html {
 
 body {
   overflow-x: hidden;
-
+  background-color: var(--charcoal-blue);
   background-repeat: no-repeat;
   color: black;
   font-family: "poppins", Arial, Helvetica, sans-serif;
@@ -103,16 +103,34 @@ nav li a:active {
   }
 
   to {
-    padding: 200px;
+    padding: 100px;
     border: 100px solid var(--refined-blue);
     transform: scale(1), rotate(45deg);
   }
 }
 
+@keyframes fade {
+  from {
+    padding-top: 50vh;
+    transform: rotatez(-45deg);
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .diamond-master {
-  height: 140vh;
+  height: 100vh;
   overflow: visible;
-  background-color: var(--charcoal-blue);
+}
+
+.grid-container {
+  grid-gap: 30px;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
 }
 
 .diamond-container {
@@ -124,6 +142,60 @@ nav li a:active {
   width: 100vh;
 
   transform: rotate(45deg);
+}
+
+.diamond-element {
+  transition: all 150ms ease-in-out;
+  animation: 1s drop-in both 1.5s;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  background-color: var(--charcoal-blue);
+}
+
+.diamond-element i {
+  color: var(--platinum-gray);
+  font-size: 50px;
+  transform: rotate(-45deg);
+}
+
+.diamond-element:hover {
+  background-color: var(--light-blue);
+  transform: scale(1.5);
+}
+
+.diamond-element:nth-child(1) {
+  animation: 1s drop-in both 1.7s;
+}
+
+.diamond-element:nth-child(2) {
+  animation: 1s drop-in both 2s;
+}
+
+.diamond-element:nth-child(3) {
+  animation: 1s drop-in both 1.4s;
+}
+
+.diamond-element:nth-child(4) {
+  animation: 1s drop-in both 1.6s;
+}
+
+@keyframes drop-in {
+  from {
+    transform: scale(0);
+    border-radius: 1000px;
+  }
+
+  to {
+    transform: scale(1);
+    border-radius: 10px;
+  }
+}
+
+.diamond-element p:hover {
+  transform: rotateZ(-45deg);
 }
 
 .hide-nav {
