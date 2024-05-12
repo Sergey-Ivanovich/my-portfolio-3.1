@@ -171,7 +171,15 @@ nav li a:active {
 }
 
 .diamond-element:nth-child(2) {
+  background-color: var(--refined-blue);
+
+  padding: 0px;
   animation: 1s drop-in both 2s;
+}
+
+.diamond-element:nth-child(2):hover {
+  background-color: var(--navy);
+  color: var(--platinum-gray);
 }
 
 .diamond-element:nth-child(3) {
@@ -194,8 +202,9 @@ nav li a:active {
   }
 }
 
-.diamond-element p:hover {
-  transform: rotateZ(-45deg);
+.diamond-container h1 {
+  top: 25%;
+  position: absolute;
 }
 
 .hide-nav {
