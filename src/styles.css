@@ -77,7 +77,7 @@ nav li a {
 
 nav li a:hover {
   cursor: pointer;
-  color: var(--charcoal-blue);
+  color: var(--gray);
 }
 
 nav li a:active {
@@ -134,8 +134,6 @@ nav li a:active {
 
 @keyframes fade {
   from {
-    padding-top: 50vh;
-    transform: rotatez(-45deg);
     opacity: 0;
   }
 
@@ -239,6 +237,10 @@ nav li a:active {
 }
 
 .diamond-container h1 {
+  position: relative;
+  right: -10px;
+  animation: 0.7s fade both linear;
+  animation-delay: 3s;
   overflow: visible;
   width: 0px;
   height: 0px;
