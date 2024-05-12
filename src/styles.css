@@ -108,6 +108,29 @@ nav li a:active {
     transform: scale(1), rotate(45deg);
   }
 }
+@keyframes mobile-land-in {
+  from {
+    transform: scale(5);
+  }
+  45% {
+    transform: scale(0.8);
+  }
+
+  60% {
+    transform: scale(1);
+  }
+
+  70% {
+    border: none;
+    transform: rotate(0);
+  }
+
+  to {
+    padding: 10px;
+    border: 10vw solid var(--refined-blue);
+    transform: scale(1), rotate(45deg);
+  }
+}
 
 @keyframes fade {
   from {
@@ -123,7 +146,8 @@ nav li a:active {
 
 .diamond-master {
   height: 100vh;
-  overflow: visible;
+  overflow: hidden;
+  border-bottom: 5px solid var(--gray-blue);
 }
 
 .grid-container {
@@ -142,6 +166,18 @@ nav li a:active {
   width: 100vh;
 
   transform: rotate(45deg);
+}
+
+.mobile-diamond {
+  position: relative;
+  top: 20vh;
+  transform: rotate(45deg);
+  height: 100vw;
+  width: 100vw;
+  animation: 1s mobile-land-in both;
+  background-color: var(--gray-blue);
+
+  transition: all 100ms ease-in-out;
 }
 
 .diamond-element {
@@ -203,8 +239,9 @@ nav li a:active {
 }
 
 .diamond-container h1 {
-  top: 25%;
-  position: absolute;
+  overflow: visible;
+  width: 0px;
+  height: 0px;
 }
 
 .hide-nav {
@@ -285,4 +322,11 @@ footer i:hover {
 }
 
 @media (max-width: 767px) {
+  .diamond-master {
+    height: 100vh;
+  }
+  .diamond-container {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }
