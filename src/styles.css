@@ -263,13 +263,14 @@ nav li a:active {
 }
 
 .project-frame {
-  scrollbar-gutter: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   grid-gap: 10px;
   display: grid;
   grid-template-columns: 30vw 30vw 30vw 30vw 30vw;
   animation: slide-in-left both linear;
   animation-timeline: view();
-  animation-range: entry 100px;
+  animation-range: entry;
   width: 100vw;
   padding: 20px 50px;
   box-shadow: inset 10px 10px 1000px var(--charcoal-blue);
@@ -285,7 +286,12 @@ nav li a:active {
   aspect-ratio: 16/9;
 }
 
+.project-frame::-webkit-scrollbar {
+  display: none;
+}
+
 .project-container p {
+  color: white;
   transform: translateY(00px);
   text-align: center;
   opacity: 0;
@@ -308,6 +314,7 @@ nav li a:active {
 }
 
 .project-work:hover {
+  transform: scale(1.1);
   cursor: pointer;
   filter: blur(10px) brightness(0.5);
 }
