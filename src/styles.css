@@ -263,12 +263,13 @@ nav li a:active {
 }
 
 .project-frame {
+  scrollbar-gutter: none;
   grid-gap: 10px;
   display: grid;
   grid-template-columns: 30vw 30vw 30vw 30vw 30vw;
   animation: slide-in-left both linear;
   animation-timeline: view();
-  animation-range: entry;
+  animation-range: entry 100px;
   width: 100vw;
   padding: 20px 50px;
   box-shadow: inset 10px 10px 1000px var(--charcoal-blue);
@@ -284,28 +285,38 @@ nav li a:active {
   aspect-ratio: 16/9;
 }
 
+.project-work:hover + body {
+  color: #0099ff;
+}
+
 .project-work {
   width: 100%;
   height: 100%;
   background-color: green;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 110%;
+  transition: all 200ms ease-in-out;
 }
 
-.project-frame:nth-child(1) .project-container .project-work {
+.project-work:hover {
+  cursor: pointer;
+  filter: blur(10px) brightness(0.5);
+}
+
+.project-frame :nth-child(1) .project-work {
   background-image: url(../images/antalya.png);
 }
-.project-frame:nth-child(2) .project-container .project-work {
+.project-frame :nth-child(2) .project-work {
   background-image: url(../images/faulcon.png);
 }
-.project-frame:nth-child(3) .project-container .project-work {
+.project-frame :nth-child(3) .project-work {
   background-image: url(../images/dictionary.png);
 }
-.project-frame:nth-child(4) .project-container .project-work {
+.project-frame :nth-child(4) .project-work {
   background-image: url(../images/weather-react.png);
 }
-.project-frame:nth-child(5) .project-container .project-work {
+.project-frame :nth-child(5) .project-work {
   background-image: url(../images/plane.png);
 }
 
