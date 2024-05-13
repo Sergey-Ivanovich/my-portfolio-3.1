@@ -285,8 +285,16 @@ nav li a:active {
   aspect-ratio: 16/9;
 }
 
-.project-work:hover + body {
-  color: #0099ff;
+.project-container p {
+  transform: translateY(00px);
+  text-align: center;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.project-work:hover + p {
+  transform: translateY(-100px);
+  opacity: 1;
 }
 
 .project-work {
