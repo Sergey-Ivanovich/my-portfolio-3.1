@@ -1,5 +1,6 @@
 html {
   overscroll-behavior: none;
+  -webkit-overscroll-behavior: none;
 }
 
 :root {
@@ -287,6 +288,23 @@ footer i:hover {
   border-radius: 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+@keyframes lift-up {
+  from {
+    height: 100vh;
+  }
+  to {
+    height: 50vh;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .diamond-master {
+    animation: lift-up both linear;
+    animation-timeline: view();
+    animation-range: exit;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
