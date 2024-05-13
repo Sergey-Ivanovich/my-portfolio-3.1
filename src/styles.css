@@ -254,7 +254,7 @@ nav li a:active {
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(100vw);
+    transform: translateX(50vw);
   }
 
   to {
