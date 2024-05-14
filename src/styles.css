@@ -459,6 +459,7 @@ footer i:hover {
 @media (max-width: 1200px) {
 }
 
+/*
 @keyframes appear {
   from {
     height: 70vh;
@@ -470,13 +471,14 @@ footer i:hover {
     height: 100vh;
   }
 }
+*/
 
 @media (max-width: 767px) {
   html {
   }
 
   .diamond-master {
-    animation: appear reverse both linear;
+    animation: lift-up both linear;
     animation-timeline: view();
     animation-range: exit;
     height: 100vh;
