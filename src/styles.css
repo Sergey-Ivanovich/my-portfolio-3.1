@@ -459,7 +459,7 @@ footer i:hover {
 @keyframes appear {
   from {
     filter: blur(100px);
-    height: 60vh;
+    height: 80vh;
     opacity: 0;
   }
 
