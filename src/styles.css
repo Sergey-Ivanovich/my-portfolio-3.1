@@ -252,10 +252,13 @@ nav li a:active {
 }
 
 main hr {
+  margin: 0px;
+  padding: 0px;
   border: 0px;
   width: 100%;
-  background-color: var(--navy);
-  height: 4px;
+  background-color: var(--gray-blue);
+  height: 7px;
+  opacity: 1;
 }
 
 @keyframes slide-in-left {
@@ -458,9 +461,9 @@ footer i:hover {
 
 @keyframes appear {
   from {
-    filter: blur(100px);
-    height: 80vh;
-    opacity: 0;
+    height: 70vh;
+    opacity: 0.5;
+    filter: blur(5px);
   }
 
   to {
