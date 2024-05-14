@@ -254,7 +254,7 @@ nav li a:active {
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(50vw);
+    transform: translateX(30vw);
   }
 
   to {
@@ -301,6 +301,10 @@ nav li a:active {
 .project-work:hover + p {
   transform: translateY(-100px);
   opacity: 1;
+}
+
+.project-frame p:hover {
+  transform: translateY(-100px);
 }
 
 .project-work {
