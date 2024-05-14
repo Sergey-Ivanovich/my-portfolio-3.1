@@ -1,7 +1,6 @@
 html {
   overscroll-behavior: none;
   -webkit-overscroll-behavior: none;
-  overflow-x: hidden;
 }
 
 :root {
@@ -256,11 +255,11 @@ nav li a:active {
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(30vw);
   }
 
   to {
-    transform: translateX(0px);
+    transform: translateX(0vw);
   }
 }
 
@@ -270,9 +269,7 @@ nav li a:active {
   grid-gap: 10px;
   display: grid;
   grid-template-columns: 30vw 30vw 30vw 30vw 30vw;
-  animation: slide-in-left both linear;
-  animation-timeline: view();
-  animation-range: entry;
+
   width: 100vw;
   padding: 20px 50px;
   box-shadow: inset 10px 10px 1000px var(--charcoal-blue);
@@ -408,14 +405,21 @@ footer i:hover {
 @media (prefers-reduced-motion: no-preference) {
 }
 
-@media (min-width: 767px) {
-  @supports (animation-timeline: view()) {
-    .diamond-master {
-      animation: lift-up both linear;
-      animation-timeline: view();
-      animation-range: exit;
-    }
+@supports (animation-timeline: view()) {
+  .diamond-master {
+    animation: lift-up both linear;
+    animation-timeline: view();
+    animation-range: exit;
   }
+
+  .project-frame {
+    animation: slide-in-left both linear;
+    animation-timeline: view();
+    animation-range: entry;
+  }
+}
+
+@media (min-width: 767px) {
   nav li a:hover::before {
     position: absolute;
     left: 90px;
@@ -447,6 +451,10 @@ footer i:hover {
 }
 
 @media (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+
   .diamond-master {
     height: 100vh;
   }
