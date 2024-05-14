@@ -453,4 +453,21 @@ footer i:hover {
     margin-right: 0px;
     margin-left: 0px;
   }
+
+  .project-container {
+    width: 90vw;
+  }
+
+  .project-frame {
+    grid-template-columns: 90vw 90vw 90vw 90vw 90vw 90vw;
+    padding: 10px;
+  }
+
+  main h2 {
+    padding: 40px 20px 0px;
+  }
+
+  main h3 {
+    padding: 10px 20px;
+  }
 }
