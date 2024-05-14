@@ -1,6 +1,7 @@
 html {
   overscroll-behavior: none;
   -webkit-overscroll-behavior: none;
+  overflow-x: hidden;
 }
 
 :root {
@@ -29,11 +30,11 @@ body {
   transform: translateX(0px);
   transition: all 200ms ease-in-out;
   z-index: 9999;
+  display: flex;
+  padding-top: 30vh;
 }
 
 .fixed-left:has(nav) {
-  display: flex;
-  padding-top: 30vh;
 }
 
 nav {
@@ -243,7 +244,7 @@ nav li a:active {
   right: -10px;
   animation: 0.7s fade both linear;
   animation-delay: 3s;
-  overflow: visible;
+  overflow-y: visible;
   width: 0px;
   height: 0px;
 }
@@ -255,7 +256,7 @@ nav li a:active {
 @keyframes slide-in-left {
   from {
     opacity: 0;
-    transform: translateX(30vw);
+    transform: translateX(100px);
   }
 
   to {
