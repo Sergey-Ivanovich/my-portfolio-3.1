@@ -251,6 +251,13 @@ nav li a:active {
   transform: translateX(-58px);
 }
 
+main hr {
+  border: 0px;
+  width: 100%;
+  background-color: var(--navy);
+  height: 4px;
+}
+
 @keyframes slide-in-left {
   from {
     opacity: 0;
@@ -404,20 +411,6 @@ footer i:hover {
 @media (prefers-reduced-motion: no-preference) {
 }
 
-@supports (animation-timeline: view()) {
-  .diamond-master {
-    animation: lift-up both linear;
-    animation-timeline: view();
-    animation-range: exit;
-  }
-
-  .project-frame {
-    animation: slide-in-left both linear;
-    animation-timeline: view();
-    animation-range: entry;
-  }
-}
-
 @media (min-width: 767px) {
   nav li a:hover::before {
     position: absolute;
@@ -444,18 +437,47 @@ footer i:hover {
   nav li a.contact:hover::before {
     content: "Contact";
   }
+
+  @supports (animation-timeline: view()) {
+    .diamond-master {
+      animation: lift-up both linear;
+      animation-timeline: view();
+      animation-range: exit;
+    }
+
+    .project-frame {
+      animation: slide-in-left both linear;
+      animation-timeline: view();
+      animation-range: entry;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
 }
 
+@keyframes appear {
+  from {
+    filter: blur(100px);
+    height: 60vh;
+    opacity: 0;
+  }
+
+  to {
+    height: 100vh;
+  }
+}
+
 @media (max-width: 767px) {
   html {
-    overflow-x: hidden;
   }
 
   .diamond-master {
+    animation: appear reverse both linear;
+    animation-timeline: view();
+    animation-range: exit;
     height: 100vh;
+    border-bottom: none;
   }
   .diamond-container {
     margin-right: 0px;
