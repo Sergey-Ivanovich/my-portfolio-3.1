@@ -473,14 +473,23 @@ footer i:hover {
 }
 */
 
+@keyframes blur {
+  to {
+    filter: blur(30px);
+  }
+}
+
+@keyframes inflate {
+  to {
+    width: 100px;
+  }
+}
+
 @media (max-width: 767px) {
   html {
   }
 
   .diamond-master {
-    animation: lift-up both linear;
-    animation-timeline: view();
-    animation-range: exit;
     height: 100vh;
     border-bottom: none;
   }
@@ -494,6 +503,9 @@ footer i:hover {
   }
 
   .project-frame {
+    animation: blur both linear reverse;
+    animation-timeline: view();
+    animation-range: entry;
     grid-template-columns: 90vw 90vw 90vw 90vw 90vw 10px;
     padding: 10px;
   }
@@ -508,5 +520,13 @@ footer i:hover {
 
   main h3 {
     padding: 10px 20px;
+  }
+
+  @supports (animation-timeline: view()) {
+    .diamond-master {
+      animation: blur both linear;
+      animation-timeline: view();
+      animation-range: exit;
+    }
   }
 }
