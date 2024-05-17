@@ -503,9 +503,6 @@ footer i:hover {
   }
 
   .project-frame {
-    animation: blur both linear reverse;
-    animation-timeline: view();
-    animation-range: entry;
     grid-template-columns: 90vw 90vw 90vw 90vw 90vw 10px;
     padding: 10px;
   }
