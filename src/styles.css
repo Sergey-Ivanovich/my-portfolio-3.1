@@ -364,9 +364,29 @@ main h3 {
 }
 
 section.contact {
+  overflow: hidden;
+
   height: 100px;
-  border-top: 4px solid var(--light-blue);
-  border-bottom: 4px solid var(--light-blue);
+  border-top: 4px solid var(--gray-blue);
+  border-bottom: 4px solid var(--gray-blue);
+}
+
+.contact .contact-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-header h2 {
+  margin: auto 0px auto 0px;
+}
+
+.drop-down-arrow {
+  text-align: end;
+  border-radius: 100px;
+  width: 60px;
+  aspect-ratio: 1/1;
+  background-color: red;
+  border: 2px solid white;
 }
 
 footer {
