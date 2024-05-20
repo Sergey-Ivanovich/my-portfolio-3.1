@@ -364,15 +364,21 @@ main h3 {
 }
 
 section.contact {
+  margin-bottom: 100px;
   overflow: hidden;
-
+  padding: 0px 20px;
   height: 100px;
   border-top: 4px solid var(--gray-blue);
   border-bottom: 4px solid var(--gray-blue);
 }
 
+.contact-container {
+  padding: 0px 0px;
+}
+
 .contact .contact-header {
   display: flex;
+  padding: 15px 0px;
   justify-content: space-between;
 }
 
@@ -381,6 +387,7 @@ section.contact {
 }
 
 .drop-down-arrow {
+  background-image: url(../images/drop-down-arrow.png);
   text-align: end;
   border-radius: 100px;
   width: 60px;
