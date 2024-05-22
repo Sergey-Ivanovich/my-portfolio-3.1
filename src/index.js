@@ -18,3 +18,10 @@ flipElements.forEach((item) => {
     item.classList.toggle("flipped");
   });
 });
+
+let dropDownElements = document.querySelectorAll(".drop-down");
+dropDownElements.forEach((dropDown, index) => {
+  dropDown.addEventListener("click", () => {
+    dropDown.classList.toggle("expand-drop-down");
+  });
+});

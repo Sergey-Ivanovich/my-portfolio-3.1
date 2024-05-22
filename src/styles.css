@@ -364,6 +364,7 @@ main h3 {
 }
 
 section.contact {
+  cursor: pointer;
   margin-bottom: 100px;
   overflow: hidden;
   padding: 0px 20px;
