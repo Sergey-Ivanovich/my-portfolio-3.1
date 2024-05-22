@@ -304,15 +304,30 @@ main hr {
   text-align: center;
   opacity: 0;
   transition: all 200ms ease-in-out;
+  padding: 100vh 0px;
+}
+
+.project-container > p > a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.project-container > p > a:hover {
+  text-decoration: underline;
 }
 
 .project-work:hover + p {
-  transform: translateY(-100px);
+  transform: translateY(-110vh);
   opacity: 1;
 }
 
 .project-frame p:hover {
-  transform: translateY(-100px);
+  transform: translateY(-110vh);
+  opacity: 1;
+  backdrop-filter: blur(10px) brightness(0.5);
+
+  -webkit-backdrop-filter: blur(10px) brightness(0.8);
 }
 
 .project-work {
@@ -325,11 +340,11 @@ main hr {
   transition: all 200ms ease-in-out;
 }
 
-.project-work:hover {
+/*.project-work:hover {
   transform: scale(1.1);
   cursor: pointer;
   filter: blur(10px) brightness(0.5);
-}
+}*/
 
 .project-frame :nth-child(1) .project-work {
   background-image: url(../images/antalya.png);
@@ -398,8 +413,16 @@ section.contact {
   border: 2px solid black;
 }
 
-section.expand-drop-down {
-  height: 100%;
+section.contact.expand-drop-down {
+  height: 50vh;
+}
+
+section.expand-drop-down h2 {
+  color: black;
+}
+
+section.expand-drop-down h2:hover {
+  color: var(--gray-blue);
 }
 
 hr.dotted {
