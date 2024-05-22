@@ -313,8 +313,25 @@ main hr {
   text-decoration: none;
 }
 
-.project-container > p > a:hover {
-  text-decoration: underline;
+.project-container > p > a::after {
+  width: 100px;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  content: "";
+  border-radius: 100px;
+  border: 2px solid var(--blue);
+  height: 2px;
+  position: absolute;
+  margin-top: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.project-container > p > a:hover::after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scaleX(1);
 }
 
 .project-work:hover + p {
