@@ -304,7 +304,6 @@ main hr {
   text-align: center;
   opacity: 0;
   transition: all 200ms ease-in-out;
-  padding: 100vh 0px;
 }
 
 .project-container > p > a {
@@ -335,16 +334,17 @@ main hr {
 }
 
 .project-work:hover + p {
-  transform: translateY(-110vh);
+  transform: translateY(-100px);
   opacity: 1;
 }
 
-.project-frame p:hover {
-  transform: translateY(-110vh);
-  opacity: 1;
-  backdrop-filter: blur(10px) brightness(0.5);
+.project-container:hover > .project-work {
+  filter: blur(10px) brightness(0.5);
+}
 
-  -webkit-backdrop-filter: blur(10px) brightness(0.8);
+.project-frame p:hover {
+  transform: translateY(-100px);
+  opacity: 1;
 }
 
 .project-work {
