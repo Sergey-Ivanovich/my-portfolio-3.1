@@ -280,7 +280,7 @@ main hr {
   grid-template-columns: 30vw 30vw 30vw 30vw 30vw;
 
   width: 100vw;
-  padding: 20px 50px;
+  padding: 20px 50px 70px;
   box-shadow: inset 10px 10px 1000px var(--charcoal-blue);
   overflow-x: scroll;
 }
@@ -444,9 +444,13 @@ section.expand-drop-down h2:hover {
 
 hr.dotted {
   border: none;
-  border-bottom: 3px dashed var(--gray-blue);
-  height: 3px;
+  border-bottom: 5px dashed var(--gray-blue);
+  height: 5px;
   padding: 0px;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
 .drop-down-arrow {
