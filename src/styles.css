@@ -277,7 +277,7 @@ main hr {
   -ms-overflow-style: none;
   grid-gap: 10px;
   display: grid;
-  grid-template-columns: 30vw 30vw 30vw 30vw 30vw;
+  grid-template-columns: 30vw 30vw 30vw 30vw 30vw 30vw;
 
   width: 100vw;
   padding: 20px 50px 70px;
@@ -377,6 +377,11 @@ main hr {
 }
 .project-frame :nth-child(5) .project-work {
   background-image: url(../images/plane.png);
+}
+
+.project-frame :nth-child(6) .project-work {
+  background-image: url(../images/To-do.png);
+  background-size: 140%;
 }
 
 .text-main {
