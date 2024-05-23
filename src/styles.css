@@ -313,7 +313,7 @@ main hr {
 }
 
 .project-container > p > a::after {
-  width: 100px;
+  width: 110px;
 
   left: 50%;
   top: 50%;
@@ -323,7 +323,7 @@ main hr {
   border: 2px solid var(--blue);
   height: 2px;
   position: absolute;
-  margin-top: 10px;
+  margin-top: 13px;
   transition: all 200ms ease-in-out;
 }
 
