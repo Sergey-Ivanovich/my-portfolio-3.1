@@ -635,10 +635,10 @@ footer i:hover {
     content: "Home";
   }
   nav li a.about:hover::before {
-    content: "About";
+    content: "Projects";
   }
   nav li a.project:hover::before {
-    content: "Projects";
+    content: "About";
   }
   nav li a.contact:hover::before {
     content: "Contact";
