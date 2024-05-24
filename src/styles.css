@@ -479,17 +479,26 @@ section.work {
 }
 
 .image-container {
+  border-radius: 12px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: 120%;
   width: 30vw;
   background-position: center;
   aspect-ratio: 16 / 9;
+  transition: all 400ms ease-in-out;
+  border: 2px solid var(--gray-blue);
+}
+
+.image-container:hover {
+  width: 100%;
 }
 
 .work-container {
   padding: 20px;
-  background-color: red;
+  background-color: var(--navy);
+  border-radius: 20px;
+  border: 2px solid var(--gray-blue);
 }
 
 .work-container .image-container:nth-child(1) {
