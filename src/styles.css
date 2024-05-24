@@ -490,10 +490,6 @@ section.work {
   border: 2px solid var(--gray-blue);
 }
 
-.image-container:hover {
-  width: 100%;
-}
-
 @keyframes move-gradient {
   from {
     background-position: left;
@@ -505,6 +501,9 @@ section.work {
 }
 
 .work-container {
+  margin-bottom: 20px;
+  color: var(--platinum-gray);
+  display: flex;
   padding: 20px;
   background-image: linear-gradient(
     45deg,
@@ -523,8 +522,29 @@ section.work {
   animation: 1.5s both move-gradient;
 }
 
+@keyframes display-disapear {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
 .work-container .image-container:nth-child(1) {
   background-image: url(../images/antalya.png);
+}
+
+.content-container {
+  width: 100%;
+  padding-left: 30px;
+  transition: all 200ms ease-in-out;
+}
+
+.content-container h3 {
+  padding: 0px;
 }
 
 footer {
