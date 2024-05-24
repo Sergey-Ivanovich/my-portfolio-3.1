@@ -466,7 +466,7 @@ hr.dotted {
   width: 60px;
   aspect-ratio: 1/1;
   background-color: transparent;
-  border: 2px solid var(--gray-blue);
+  border: 4px solid var(--gray-blue);
   transition: all 150ms ease-in-out;
 }
 
@@ -476,7 +476,6 @@ hr.dotted {
 
 section.work {
   height: 100%;
-  padding: 20px;
 }
 
 .image-container {
@@ -502,10 +501,8 @@ section.work {
 }
 
 .master-work-container {
-  border-radius: 20px;
-  border: 4px solid var(--gray-blue);
-  padding: 46px;
-  height: 810px;
+  padding: 70px 20px;
+  height: 850px;
   overflow-y: hidden;
   width: 100%;
 }
@@ -527,19 +524,19 @@ section.work {
   );
   background-size: 600%;
   border-radius: 20px;
-  border: 2px solid var(--gray-blue);
+  border: 4px solid var(--gray-blue);
   transition: all 200ms ease-in-out;
 }
 
 .work-container:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   animation: 1.5s both move-gradient;
 }
 
 .expand-toggle {
   border-radius: 20px;
   border: 4px solid var(--gray-blue);
-  margin: 20px 0px;
+  margin: 20px 20px;
   cursor: pointer;
   transition: all 200ms ease-in-out;
 }
