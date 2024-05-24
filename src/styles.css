@@ -32,9 +32,6 @@ body {
   padding-top: 30vh;
 }
 
-.fixed-left:has(nav) {
-}
-
 nav {
   background-color: var(--transparent-white);
   backdrop-filter: blur(10px);
@@ -477,6 +474,28 @@ hr.dotted {
   rotate: 225deg;
 }
 
+section.work {
+  padding: 70px;
+}
+
+.image-container {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  width: 30vw;
+  background-position: center;
+  aspect-ratio: 16 / 9;
+}
+
+.work-container {
+  padding: 20px;
+  background-color: red;
+}
+
+.work-container .image-container:nth-child(1) {
+  background-image: url(../images/antalya.png);
+}
+
 footer {
   border: 5px solid var(--gray-blue);
   border-bottom: none;
@@ -604,9 +623,6 @@ footer i:hover {
 }
 
 @media (max-width: 767px) {
-  html {
-  }
-
   .diamond-master {
     height: 100vh;
     border-bottom: none;
