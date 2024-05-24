@@ -475,7 +475,8 @@ hr.dotted {
 }
 
 section.work {
-  padding: 70px;
+  height: 100%;
+  padding: 20px;
 }
 
 .image-container {
@@ -500,6 +501,19 @@ section.work {
   }
 }
 
+.master-work-container {
+  border-radius: 20px;
+  border: 4px solid var(--gray-blue);
+  padding: 46px;
+  height: 810px;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.expanded .master-work-container {
+  height: 100%;
+}
+
 .work-container {
   margin-bottom: 20px;
   color: var(--platinum-gray);
@@ -520,6 +534,24 @@ section.work {
 .work-container:hover {
   transform: scale(1.05);
   animation: 1.5s both move-gradient;
+}
+
+.expand-toggle {
+  border-radius: 20px;
+  border: 4px solid var(--gray-blue);
+  margin: 20px 0px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.expand-toggle .drop-down-arrow {
+  margin: auto;
+  display: block;
+  border: none;
+}
+
+.expand-toggle:hover {
+  background-color: var(--gray-blue);
 }
 
 @keyframes display-disapear {
