@@ -494,11 +494,33 @@ section.work {
   width: 100%;
 }
 
+@keyframes move-gradient {
+  from {
+    background-position: left;
+  }
+
+  to {
+    background-position: right;
+  }
+}
+
 .work-container {
   padding: 20px;
-  background-color: var(--navy);
+  background-image: linear-gradient(
+    45deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.352),
+    transparent 40%
+  );
+  background-size: 600%;
   border-radius: 20px;
   border: 2px solid var(--gray-blue);
+  transition: all 200ms ease-in-out;
+}
+
+.work-container:hover {
+  transform: scale(1.05);
+  animation: 1.5s both move-gradient;
 }
 
 .work-container .image-container:nth-child(1) {
