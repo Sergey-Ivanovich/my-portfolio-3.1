@@ -540,7 +540,7 @@ section.work {
   background-image: url(../images/weather-react.png);
 }
 .work-container:nth-child(3) .image-container {
-  background-image: url(../images/antalya.png);
+  background-image: url(../images/dictionary.png);
 }
 .work-container:nth-child(4) .image-container {
   background-image: url(../images/antalya.png);
@@ -717,6 +717,33 @@ footer i:hover {
 
   main h3 {
     padding: 10px 20px;
+  }
+
+  .image-container {
+    width: 100%;
+    display: block;
+  }
+
+  .content-container {
+    margin-top: 10px;
+  }
+
+  .work-container {
+    background-image: linear-gradient(
+      45deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.352),
+      transparent 60%
+    );
+    display: block;
+  }
+
+  section.work {
+    padding: 70px 20px;
+  }
+
+  .content-container {
+    padding: 0;
   }
 
   @supports (animation-timeline: view()) {
