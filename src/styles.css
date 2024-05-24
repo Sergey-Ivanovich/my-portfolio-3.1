@@ -533,7 +533,22 @@ section.work {
   }
 }
 
-.work-container .image-container:nth-child(1) {
+.work-container:nth-child(1) .image-container {
+  background-image: url(../images/antalya.png);
+}
+.work-container:nth-child(2) .image-container {
+  background-image: url(../images/weather-react.png);
+}
+.work-container:nth-child(3) .image-container {
+  background-image: url(../images/antalya.png);
+}
+.work-container:nth-child(4) .image-container {
+  background-image: url(../images/antalya.png);
+}
+.work-container:nth-child(5) .image-container {
+  background-image: url(../images/antalya.png);
+}
+.work-container:nth-child(6) .image-container {
   background-image: url(../images/antalya.png);
 }
 
