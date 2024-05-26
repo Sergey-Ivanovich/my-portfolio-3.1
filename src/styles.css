@@ -538,8 +538,8 @@ section.work {
 }
 
 .expand-toggle {
-  border-radius: 10px 10px 20px 20px;
-  border: 4px solid var(--gray-blue);
+  border-radius: 20px;
+
   margin: 0px 20px 20px;
   cursor: pointer;
   transition: all 200ms ease-in-out;
@@ -777,6 +777,10 @@ footer i:hover {
 
   .content-container {
     padding: 0;
+  }
+
+  .expand-toggle {
+    border: 4px solid var(--gray-blue);
   }
 
   @supports (animation-timeline: view()) {
