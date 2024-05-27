@@ -535,34 +535,41 @@ section.work {
   from {
     opacity: 0;
     filter: blur(10px);
+    transform: translateX(-50vw);
+  }
+
+  40% {
+    transform: translateX(10px);
   }
 
   50% {
+    transform: translateX(0px);
+    opacity: 1;
     background-position: right;
   }
   to {
     background-position: left;
-    opacity: 1;
     filter: blur(0px);
   }
 }
 
 .master-work-container.expanded > .work-container:nth-child(4) {
   display: flex;
-  animation: appear 1s ease-in-out both;
+  animation: appear 1s ease-in-out forwards;
 }
 .master-work-container.expanded > .work-container:nth-child(5) {
   display: flex;
-  animation: appear 1.5s ease-in-out both;
+  animation: appear 1.5s ease-in-out forwards;
 }
 .master-work-container.expanded > .work-container:nth-child(6) {
   display: flex;
-  animation: appear 2s ease-in-out both;
+  animation: appear 2s ease-in-out forwards;
 }
 
 .work-container:hover {
   transform: scale(1.02);
-  animation: 1.5s both move-gradient;
+  animation: 1.5s both move-gradient alternate;
+  animation-fill-mode: forwards;
 }
 
 .expand-toggle {
