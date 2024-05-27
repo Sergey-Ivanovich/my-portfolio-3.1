@@ -519,17 +519,6 @@ section.work {
   display: none;
 }
 
-.master-work-container::after {
-  content: "";
-  background-image: url(../images/drop-down-arrow.png);
-  rotate: 225deg;
-  background-size: 100px;
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  bottom: 100px;
-}
-
 .expanded .master-work-container {
   height: 100%;
 }
