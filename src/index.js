@@ -25,3 +25,9 @@ dropDownElements.forEach((dropDown, index) => {
     dropDown.classList.toggle("expand-drop-down");
   });
 });
+
+let workMasterElement = document.querySelector(".master-work-container");
+let workExpanderElement = document.querySelector(".expand-toggle");
+workExpanderElement.addEventListener("click", () => {
+  workMasterElement.classList.toggle("expanded");
+});
