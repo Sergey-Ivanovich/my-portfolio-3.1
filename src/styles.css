@@ -508,10 +508,6 @@ section.work {
   transition: all 200ms ease-in-out;
 }
 
-.master-work-container.expanded {
-  padding-bottom: 10px;
-}
-
 .work-container {
   margin-bottom: 20px;
   color: var(--platinum-gray);
@@ -531,6 +527,37 @@ section.work {
 
 .work-container:nth-child(n + 4) {
   display: none;
+
+  transition: all 200ms ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  50% {
+    background-position: right;
+  }
+  to {
+    background-position: left;
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.master-work-container.expanded > .work-container:nth-child(4) {
+  display: flex;
+  animation: appear 1s ease-in-out both;
+}
+.master-work-container.expanded > .work-container:nth-child(5) {
+  display: flex;
+  animation: appear 1.5s ease-in-out both;
+}
+.master-work-container.expanded > .work-container:nth-child(6) {
+  display: flex;
+  animation: appear 2s ease-in-out both;
 }
 
 .work-container:hover {
@@ -550,10 +577,6 @@ section.work {
   margin: auto;
   display: block;
   border: none;
-}
-
-.master-work-container .expanded .expand-toggle .drop-down-arrow {
-  rotate: 90deg;
 }
 
 .expand-toggle:hover {
