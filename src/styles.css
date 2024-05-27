@@ -433,7 +433,7 @@ section.contact {
 }
 
 section.contact.expand-drop-down {
-  height: 50vh;
+  height: 100vh;
 }
 
 section.expand-drop-down h2 {
@@ -505,6 +505,10 @@ section.work {
   height: 850px;
   overflow-y: hidden;
   width: 100%;
+}
+
+.master-work-container.appear > .work-container {
+  animation: 1s appear-smooth both linear;
 }
 
 .expanded .master-work-container {
