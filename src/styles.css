@@ -580,10 +580,13 @@ section.work {
   transition: all 200ms ease-in-out;
 }
 
-.expand-toggle .drop-down-arrow {
+section.work > .expand-toggle .drop-down-arrow {
   margin: auto;
   display: block;
   border: none;
+}
+
+section.work > .master-work-container.expanded > .drop-down-arrow {
 }
 
 .expand-toggle:hover {
@@ -779,6 +782,11 @@ footer i:hover {
     border-radius: 15px;
   }
 
+  .expand-toggle {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   main h2 {
     padding: 40px 20px 0px;
   }
@@ -814,7 +822,7 @@ footer i:hover {
   }
 
   .master-work-container {
-    padding: 70px 0px;
+    padding: 70px 0px 10px;
   }
 
   .work-container {
