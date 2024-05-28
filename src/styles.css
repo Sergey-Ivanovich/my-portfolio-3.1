@@ -636,6 +636,22 @@ section.work > .master-work-container.expanded > .drop-down-arrow {
   padding: 0px;
 }
 
+.logo-master {
+  display: grid;
+  align-items: center;
+}
+
+.logo-container {
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/logo.png);
+  background-size: 70%;
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 footer {
   border: 5px solid var(--gray-blue);
   border-bottom: none;
