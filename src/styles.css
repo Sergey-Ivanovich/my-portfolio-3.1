@@ -502,10 +502,11 @@ section.work {
 
 .master-work-container {
   padding: 70px 20px 0px;
-  height: 100%;
+  height: auto;
   overflow-y: hidden;
   width: 100%;
   transition: all 200ms ease-in-out;
+  z-index: 2;
 }
 
 .work-container {
@@ -525,10 +526,18 @@ section.work {
   transition: all 200ms ease-in-out;
 }
 
-.work-container:nth-child(n + 4) {
-  display: none;
-
+.master-work-container .hidden-container {
   transition: all 200ms ease-in-out;
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  height: 0;
+}
+
+.master-work-container.expanded .hidden-container {
+  opacity: 1;
+  height: auto;
+  transform: scaleY(1);
 }
 
 @keyframes appear {
@@ -545,19 +554,6 @@ section.work {
     /*background-position: left;*/
     filter: blur(0px);
   }
-}
-
-.master-work-container.expanded > .work-container:nth-child(4) {
-  display: flex;
-  /*animation: appear 1s ease-in-out forwards;*/
-}
-.master-work-container.expanded > .work-container:nth-child(5) {
-  display: flex;
-  /*animation: appear 1.5s ease-in-out forwards;*/
-}
-.master-work-container.expanded > .work-container:nth-child(6) {
-  display: flex;
-  /*animation: appear 2s ease-in-out forwards;*/
 }
 
 .work-container:hover {
