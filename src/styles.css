@@ -798,7 +798,13 @@ footer i:hover {
     margin-top: 10px;
   }
 
+  .master-work-container.expanded > .work-container:nth-child(n + 4) {
+    display: block;
+  }
+
   .expand-toggle {
+    margin-left: 20px;
+    margin-right: 20px;
     border: 4px solid var(--gray-blue);
   }
 
