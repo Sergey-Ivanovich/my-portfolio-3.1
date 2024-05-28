@@ -533,6 +533,7 @@ section.work {
   overflow: hidden;
   height: 100%;
   width: 100%;
+  padding: 0px 20px;
 }
 
 .master-work-container.expanded .hidden-projects {
@@ -813,8 +814,7 @@ footer i:hover {
   .hidden-projects {
     transition: all 200ms ease-in-out;
     overflow-y: hidden;
-    margin-right: -20px;
-    margin-left: -20px;
+
     height: 100%;
     width: 100%;
   }
