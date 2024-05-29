@@ -665,6 +665,11 @@ h5 {
   font-size: 30px;
 }
 
+.disclaimer {
+  font-size: 15px;
+  padding: 20px;
+}
+
 footer {
   border: 5px solid var(--gray-blue);
   border-bottom: none;
@@ -856,6 +861,20 @@ footer i:hover {
 
   .master-work-container {
     padding: 70px 20px 10px;
+  }
+
+  h5 {
+    padding: none;
+    font-size: 25px;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+  }
+
+  .my-contact-info {
+    padding: none;
+    font-size: 15px;
   }
 
   .work-container {
