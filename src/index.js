@@ -27,7 +27,7 @@ dropDownElements.forEach(function toggleDrop(dropDown, index) {
       dropDown.classList.toggle("expand-drop-down");
     } else {
       dropDown.classList.toggle("expand-drop-down");
-      dropDown.style.height = dropDownHeight + "px";
+      dropDown.style.height = dropDownHeight + 50 + "px";
     }
   });
 });
