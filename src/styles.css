@@ -656,10 +656,12 @@ section.work > .master-work-container.expanded > .drop-down-arrow {
 }
 
 h5 {
+  padding: 20px 20px 10px;
   font-size: 20px;
 }
 
 .my-contact-info {
+  padding: 0px 20px;
   font-size: 30px;
 }
 
