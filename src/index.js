@@ -20,9 +20,18 @@ flipElements.forEach((item) => {
 });
 
 let dropDownElements = document.querySelectorAll(".drop-down");
-dropDownElements.forEach((dropDown, index) => {
+dropDownElements.forEach(function toggleDrop(dropDown, index) {
+  const dropDownHeight = dropDown.clientHeight;
   dropDown.addEventListener("click", () => {
-    dropDown.classList.toggle("expand-drop-down");
+    if (dropDown.clientHeight >= 100) {
+      dropDown.style.height = 100 + "px";
+      dropDown.classList.toggle("expand-drop-down");
+    } else {
+      dropDown.classList.toggle("expand-drop-down");
+      dropDown.style.height = dropDownHeight + "px";
+      console.log(dropDownHeight);
+      console.log(dropDown.clientHeight);
+    }
   });
 });
 
