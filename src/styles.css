@@ -618,15 +618,15 @@ section.work > .master-work-container.expanded > .drop-down-arrow {
 .work-container:nth-child(3) .image-container {
   background-image: url(../images/dictionary.png);
 }
-.work-container:nth-child(4) .image-container {
+.hidden-projects .work-container:nth-child(3) .image-container {
   background-image: url(../images/time.png);
   background-position: 50% 10%;
 }
-.work-container:nth-child(5) .image-container {
-  background-image: url(../images/antalya.png);
+.hidden-projects .work-container:nth-child(4) .image-container {
+  background-image: url(../images/To-do.png);
 }
-.work-container:nth-child(6) .image-container {
-  background-image: url(../images/antalya.png);
+.hidden-projects .work-container:nth-child(5) .image-container {
+  background-image: url(../images/plane.png);
 }
 
 .content-container {
@@ -653,6 +653,14 @@ section.work > .master-work-container.expanded > .drop-down-arrow {
 
   background-repeat: no-repeat;
   background-position: center;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+.my-contact-info {
+  font-size: 30px;
 }
 
 footer {
