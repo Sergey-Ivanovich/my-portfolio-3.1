@@ -13,7 +13,6 @@ if (window.innerWidth < 767) {
 let flipElements = document.querySelectorAll("#flippable");
 
 flipElements.forEach((item) => {
-  console.log(item);
   item.addEventListener("click", () => {
     item.classList.toggle("flipped");
   });
@@ -29,8 +28,6 @@ dropDownElements.forEach(function toggleDrop(dropDown, index) {
     } else {
       dropDown.classList.toggle("expand-drop-down");
       dropDown.style.height = dropDownHeight + "px";
-      console.log(dropDownHeight);
-      console.log(dropDown.clientHeight);
     }
   });
 });
@@ -45,8 +42,6 @@ const hiddenHeight = hiddenElement.clientHeight + 70;
 workExpanderElement.addEventListener("click", expandHiddenProjects);
 
 function expandHiddenProjects() {
-  console.log(hiddenHeight);
-
   if (hiddenElement.clientHeight === 0) {
     hiddenElement.style.height = hiddenHeight + "px";
   } else {
